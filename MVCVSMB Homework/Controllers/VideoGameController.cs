@@ -24,6 +24,8 @@ namespace MVCVSMB_Homework.Controllers
             vid.ESRBRating = Convert.ToChar(form["rating"]);
             vid.Systems = form["systems"];
             vid.Price = Convert.ToDecimal(form["price"]);
+            //Add to Database
+            ViewData["Added"] = true;
             return View();
         }
     }
