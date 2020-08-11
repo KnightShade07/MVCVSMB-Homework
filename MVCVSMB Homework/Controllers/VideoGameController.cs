@@ -25,7 +25,7 @@ namespace MVCVSMB_Homework.Controllers
             vid.Systems = form["systems"];
             vid.Price = Convert.ToDecimal(form["price"]);
             //Add to Database
-            ViewData["Added"] = true;
+            ViewData["Added"] = vid.Title;
             return View();
         }
     }
