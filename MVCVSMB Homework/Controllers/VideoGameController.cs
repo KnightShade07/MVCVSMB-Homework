@@ -28,5 +28,10 @@ namespace MVCVSMB_Homework.Controllers
             ViewData["Added"] = vid.Title;
             return View();
         }
+
+        public IActionResult AddWithBinding()
+        {
+            return View();
+        }
     }
 }
