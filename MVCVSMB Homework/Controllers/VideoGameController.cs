@@ -33,5 +33,17 @@ namespace MVCVSMB_Homework.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+
+        public IActionResult AddWithBinding(VideoGame game)
+        {
+            if (ModelState.IsValid)//True if all validation in model passes
+            {
+                ViewData["Message"] = $"{game.Title} was added!";
+                //Add to Database here...
+            }
+            return View();
+        }
     }
 }
