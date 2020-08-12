@@ -5,26 +5,34 @@
 
 <h1>Add With Model Binding</h1>
 
-<form method="post">
-    <label asp-for="Title"></label>
-    <input asp-for="Title" />
-    <span asp-validation-for="Title"></span>
-    <br />
+@if(ViewData["Message"] == null)
+{
+    <form method="post">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+        <br />
 
-    <label asp-for="ESRBRating"></label>
-    <input asp-for="ESRBRating" />
-    <span asp-validation-for="ESRBRating"></span>
-    <br />
+        <label asp-for="ESRBRating"></label>
+        <input asp-for="ESRBRating" />
+        <span asp-validation-for="ESRBRating"></span>
+        <br />
 
-    <label asp-for="Systems"></label>
-    <input asp-for="Systems" />
-    <span asp-validation-for="Systems"></span>
-    <br />
+        <label asp-for="Systems"></label>
+        <input asp-for="Systems" />
+        <span asp-validation-for="Systems"></span>
+        <br />
 
-    <label asp-for="Price"></label>
-    <input asp-for="Price" />
-    <span asp-validation-for="Price"></span>
-    <br />
+        <label asp-for="Price"></label>
+        <input asp-for="Price" />
+        <span asp-validation-for="Price"></span>
+        <br />
 
-    <input type="submit" value="Add Student" />
-</form>
+        <input type="submit" value="Add Game" />
+    </form>
+}
+else
+{
+    <h2>@ViewData["Message"]</h2>
+}
+
